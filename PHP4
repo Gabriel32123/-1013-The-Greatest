@@ -1,0 +1,29 @@
+<?php
+
+while (true) {
+    
+    list($m, $n) = fscanf(STDIN, "%d %d\n");
+
+    
+    if ($m <= 0 || $n <= 0) {
+        break;
+    }
+
+    
+    $menor = min($m, $n);
+    $maior = max($m, $n);
+
+    
+    $soma = 0;
+
+    
+    for ($i = $menor; $i <= $maior; $i++) {
+        echo $i . " ";
+        $soma += $i;
+    }
+
+    
+    echo "Sum=" . $soma . PHP_EOL;
+}
+
+?>
