@@ -1,0 +1,29 @@
+<?php
+
+
+function calcularMinutosParaDormir($horaAtual, $minutoAtual, $horaAlarme, $minutoAlarme) {
+    $minutosAtual = $horaAtual * 60 + $minutoAtual; 
+    $minutosAlarme = $horaAlarme * 60 + $minutoAlarme; 
+    
+    
+    if ($minutosAlarme > $minutosAtual) {
+        return $minutosAlarme - $minutosAtual;
+    } else { 
+        return 24 * 60 - ($minutosAtual - $minutosAlarme);
+    }
+}
+
+
+while (true) {
+    fscanf(STDIN, "%d %d %d %d", $horaAtual, $minutoAtual, $horaAlarme, $minutoAlarme);
+    
+    
+    if ($horaAtual == 0 && $minutoAtual == 0 && $horaAlarme == 0 && $minutoAlarme == 0) {
+        break;
+    }
+    
+    
+    echo calcularMinutosParaDormir($horaAtual, $minutoAtual, $horaAlarme, $minutoAlarme) . "\n";
+}
+
+?>
