@@ -2,7 +2,7 @@
 
 
 function ordenarValores($valores) {
-    // Separa os valores em pares e ímpares
+    
     $pares = [];
     $impares = [];
 
