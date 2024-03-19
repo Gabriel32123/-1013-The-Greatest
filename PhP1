@@ -1,15 +1,15 @@
 <?php
 
-// Lê os três valores
+
 list($a, $b, $c) = explode(" ", fgets(STDIN));
 
-// Calcula o maior entre a e b
+
 $maiorAB = ($a + $b + abs($a - $b)) / 2;
 
-// Calcula o maior entre o maiorAB e c
+
 $maior = ($maiorAB + $c + abs($maiorAB - $c)) / 2;
 
-// Imprime o resultado
+
 echo $maior . " eh o maior\n";
 
 ?>
